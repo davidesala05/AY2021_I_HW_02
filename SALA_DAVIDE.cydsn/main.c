@@ -20,6 +20,12 @@ int main(void)
     for(;;)
     {
         /* Place your application code here. */
+        PWM_green_Start();
+        PWM_red_Start();
+        CyDelay(5000);
+        PWM_green_WriteCounter(999);
+        PWM_green_WritePeriod(999);
+        PWM_green_WriteCompare(499);
     }
 }
 
