@@ -10,22 +10,27 @@
  * ========================================
 */
 #include "project.h"
+#include "InterruptRoutines.h"
+#include "PatternDriver.h"
+#include "cytypes.h"
+
+#define MAX_PATTERN 7
+
+uint8_t count_press_button = 0;
 
 int main(void)
 {
     CyGlobalIntEnable; /* Enable global interrupts. */
-
+    BUTTON_ISR_StartEx(Custom_BUTTON_ISR);
+    PWM_red_Start();
+    PWM_green_Start();
+    
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
 
     for(;;)
     {
         /* Place your application code here. */
-        PWM_green_Start();
-        PWM_red_Start();
-        CyDelay(5000);
-        PWM_green_WriteCounter(999);
-        PWM_green_WritePeriod(999);
-        PWM_green_WriteCompare(499);
+        
     }
 }
 
