@@ -16,15 +16,14 @@
     
     #include "cytypes.h"
     
-    
-    typedef struct {
+     typedef struct {
         
-        uint16 start_count_red;
-        uint16 period_red;
-        uint16 DC_red;
-        uint16 start_count_green;
-        uint16 period_green;
-        uint16 DC_green;
+        uint16_t start_count_red;
+        uint16_t period_red;
+        uint16_t DC_red;
+        uint16_t start_count_green;
+        uint16_t period_green;
+        uint16_t DC_green;
         
     } pattern;
     

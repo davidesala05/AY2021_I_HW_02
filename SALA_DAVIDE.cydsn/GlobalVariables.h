@@ -9,16 +9,9 @@
  *
  * ========================================
 */
-
-#ifndef __INTERRUPT_ROUTINES_H_
+  
+#include "cytypes.h"
+extern uint8_t count_press_button;
     
-    #define __INTERRUPT_ROUTINES_H_
-    #define MAX_PATTERN 7
-    #include "project.h"
-    
-    CY_ISR_PROTO(Custom_BUTTON_ISR);
-    
-#endif
-
 
 /* [] END OF FILE */
