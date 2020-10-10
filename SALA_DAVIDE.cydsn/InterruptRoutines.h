@@ -9,7 +9,7 @@
 #ifndef __INTERRUPT_ROUTINES_H_
     
     #define __INTERRUPT_ROUTINES_H_
-    #define MAX_PATTERN 7
+    #define MAX_PATTERN 7 //numerosity of the patterns
     #include "project.h"
     
     CY_ISR_PROTO(Custom_BUTTON_ISR);

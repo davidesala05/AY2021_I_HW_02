@@ -13,7 +13,7 @@
     #include "cytypes.h"
     
     /* 
-       The patterns are defined as a structure composed by 6 16bit values
+       The patterns are defined as a struct composed by 6 16bit values
        16 bit are required by the PWMs to achieve the dimension of the msec
        The first three values are the parameters of the RED channel,
        the last three are those of the GREEN one
