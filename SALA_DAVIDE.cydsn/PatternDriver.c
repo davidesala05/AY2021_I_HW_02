@@ -1,12 +1,15 @@
 /* ========================================
  *
- * Copyright YOUR COMPANY, THE YEAR
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
- *
+ * That is the fucntion that change the parameters of the PWM for both the colours
+ * The parameters are:
+ * -- start_count_[color] : is the starting value for the counter in the PWM,
+ *                          is initialized equal to the period if the pattern starts high (with no phase change)
+ *                          is then used to change the phases in the patterns that required to start with a low value
+ * -- period_[color] : is the parameter used to define the period of the PWM
+ * -- DC_[color] : used to set the duty cyle of the PWM
+ * 
+ * The explanation of the patterns follows in the PatternsDefinition.h file
+ * 
  * ========================================
 */
 #include "PatternDriver.h"

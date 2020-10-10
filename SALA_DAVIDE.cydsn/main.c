@@ -1,12 +1,9 @@
 /* ========================================
  *
- * Copyright YOUR COMPANY, THE YEAR
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
- *
+ * DAVIDE SALA
+ * SECOND ASSIGNMENT
+ * The program does not do anything in the main,
+ * all the tasks are performed in the InterruptRoutines function
  * ========================================
 */
 #include "InterruptRoutines.h"

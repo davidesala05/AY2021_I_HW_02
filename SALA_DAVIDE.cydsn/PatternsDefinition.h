@@ -1,12 +1,16 @@
 /* ========================================
  *
- * Copyright YOUR COMPANY, THE YEAR
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
- *
+ * Definition of all the seven patterns used for the combinations
+ * The structure is the follow:
+ * 
+ *   {  uint16_t start_count_red;
+ *      uint16_t period_red;
+ *      uint16_t DC_red;
+ *      uint16_t start_count_green;
+ *      uint16_t period_green;
+ *      uint16_t DC_green;
+ *   }
+ * 
  * ========================================
 */
 #ifndef __PATTERNS_H_
@@ -19,7 +23,7 @@
     pattern terzo = {1000, 1999, 1000, 3999, 3999, 0};
     pattern quarto = {999, 999, 500, 499, 999, 500};
     pattern quinto = {250, 499, 250, 499, 499, 250};
-    pattern sesto = {0, 1999, 500, 1999, 1999, 1000};
+    pattern sesto = {1999, 1999, 500, 1999, 1999, 1000};
     pattern settimo = {1000, 1999, 1000, 999, 999, 500};
     
 #endif

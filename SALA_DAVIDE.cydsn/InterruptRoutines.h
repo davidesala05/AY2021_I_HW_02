@@ -1,12 +1,8 @@
 /* ========================================
  *
- * Copyright YOUR COMPANY, THE YEAR
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
- *
+ * The interrupt is called by the pression of the button
+ * In particular the ISR starts when the button is released
+ * 
  * ========================================
 */
 

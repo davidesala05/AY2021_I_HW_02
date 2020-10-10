@@ -1,12 +1,9 @@
 /* ========================================
  *
- * Copyright YOUR COMPANY, THE YEAR
- * All Rights Reserved
- * UNPUBLISHED, LICENSED SOFTWARE.
- *
- * CONFIDENTIAL AND PROPRIETARY INFORMATION
- * WHICH IS THE PROPERTY OF your company.
- *
+ * This is the ISR function in which the patterns are changed
+ * and loaded to the PWMs. The count variables is just to track the
+ * pression of the button and performed the change in the pattern
+ * 
  * ========================================
 */
 
@@ -14,7 +11,7 @@
 #include "InterruptRoutines.h"
 
 
-  // Include required header files
+ // Include required header files
 #include "PatternsDefinition.h"
 #include "GlobalVariables.h"
 #include "project.h"
@@ -22,7 +19,7 @@
 CY_ISR(Custom_BUTTON_ISR)
 {
     count_press_button++;
-    if (count_press_button > MAX_PATTERN) {
+    if (count_press_button > MAX_PATTERN) { //Verification of the patterns overflow, if it happens, the initialization to 1 (primo pattern) is done
         count_press_button = 1;
     }
     if (count_press_button == 1) {
@@ -46,8 +43,8 @@ CY_ISR(Custom_BUTTON_ISR)
     else if (count_press_button == 7) {
         SetPattern(settimo);
     }
-    PWM_red_Start();
-    PWM_green_Start();
+    PWM_red_Start(); 
+    PWM_green_Start(); // both the LEDs' PWMs are switched ON
     
 }
 
