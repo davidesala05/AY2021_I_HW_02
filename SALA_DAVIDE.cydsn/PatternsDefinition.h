@@ -11,6 +11,8 @@
  *      uint16_t DC_green;
  *   }
  * 
+ * All the patterns are group together in an array of struct
+ * 
  * ========================================
 */
 #ifndef __PATTERNS_H_
@@ -18,13 +20,16 @@
     
     #include "PatternDriver.h"
     
-    pattern primo = {3999, 3999, 0, 3999, 3999, 0}; //the first is the red pattern and then there is the green one
-    pattern secondo = {3999, 3999, 0, 1999, 1999, 1000};
-    pattern terzo = {1000, 1999, 1000, 3999, 3999, 0};
-    pattern quarto = {999, 999, 500, 499, 999, 500};
-    pattern quinto = {250, 499, 250, 499, 499, 250};
-    pattern sesto = {1999, 1999, 500, 1999, 1999, 1000};
-    pattern settimo = {1000, 1999, 1000, 999, 999, 500};
+    pattern ALL_Patterns[] = {
+        
+        {3999, 3999, 0, 3999, 3999, 0},       //primo pattern
+        {3999, 3999, 0, 1999, 1999, 1000},    //secondo pattern
+        {1000, 1999, 1000, 3999, 3999, 0},    //terzo pattern
+        {999, 999, 500, 499, 999, 500},       //quarto pattern
+        {250, 499, 250, 499, 499, 250},       //quinto pattern
+        {1999, 1999, 500, 1999, 1999, 1000},  //sesto pattern
+        {1000, 1999, 1000, 999, 999, 500}     //settimo pattern
+    };
     
 #endif
    

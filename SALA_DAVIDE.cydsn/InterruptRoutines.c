@@ -18,34 +18,15 @@
 
 CY_ISR(Custom_BUTTON_ISR)
 {
-    count_press_button++;
-    if (count_press_button > MAX_PATTERN) { //Verification of the patterns overflow, if it happens, the initialization to 1 (primo pattern) is done
-        count_press_button = 1;
+    
+    if (count_press_button > (MAX_PATTERN-1)) { //Verification of the patterns overflow, if it happens, the initialization to 1 (primo pattern) is done
+        count_press_button = 0;
     }
-    if (count_press_button == 1) {
-        SetPattern(primo);
-    }
-    else if (count_press_button == 2) {
-        SetPattern(secondo);
-    }
-    else if (count_press_button == 3) {
-        SetPattern(terzo);
-    }
-    else if (count_press_button == 4) {
-        SetPattern(quarto);
-    }
-    else if (count_press_button == 5) {
-        SetPattern(quinto);
-    }
-    else if (count_press_button == 6) {
-        SetPattern(sesto);
-    }
-    else if (count_press_button == 7) {
-        SetPattern(settimo);
-    }
+    
+    SetPattern(ALL_Patterns[count_press_button]);
     PWM_red_Start(); 
     PWM_green_Start(); // both the LEDs' PWMs are switched ON
-    
+    count_press_button++;
 }
 
 /* [] END OF FILE */
