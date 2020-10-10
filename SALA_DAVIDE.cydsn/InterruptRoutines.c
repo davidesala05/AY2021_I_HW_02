@@ -15,18 +15,15 @@
 
 
   // Include required header files
-//#include "GlobalVariables.h"
 #include "Patterns.h"
 #include "GlobalVariables.h"
 
 CY_ISR(Custom_BUTTON_ISR)
 {
-    
+    count_press_button++;
     if (count_press_button == MAX_PATTERN) {
         count_press_button = 0;
-    }
-    else if (count_press_button == 0) {
-        SetPattern(primo);
+         SetPattern(primo);
     }
     else if (count_press_button == 1) {
         SetPattern(secondo);
@@ -46,9 +43,7 @@ CY_ISR(Custom_BUTTON_ISR)
     else if (count_press_button == 6) {
         SetPattern(settimo);
     }
-    else {
-        count_press_button++;
-    }
+    
     
     
     /*
