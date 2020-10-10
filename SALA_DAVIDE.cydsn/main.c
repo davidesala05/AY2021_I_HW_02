@@ -21,9 +21,6 @@ int main(void)
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
    
     BUTTON_ISR_StartEx(Custom_BUTTON_ISR);
-    PWM_red_Start();
-    PWM_green_Start();
-   
     
     for(;;)
     {
