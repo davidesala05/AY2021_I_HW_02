@@ -1,7 +1,7 @@
 /* ========================================
  *
  * The interrupt is called by the pression of the button
- * In particular the ISR starts when the button is released
+ * In particular, the ISR starts when the button is released
  * 
  * ========================================
 */

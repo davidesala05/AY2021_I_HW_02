@@ -1,6 +1,6 @@
 /* ========================================
  *
- * Definition of all the seven patterns used for the combinations
+ * Definition of all the seven patterns used for the combinations.
  * The structure is the follow:
  * 
  *   {  uint16_t start_count_red;
@@ -20,15 +20,20 @@
     
     #include "PatternDriver.h"
     
+    /*
+        In order to switch between the patterns is the easiest way,
+        the patterns are group together in a vector of structs.
+    */
+    
     pattern ALL_Patterns[] = {
         
-        {2, 3999, 0, 2, 3999, 0},       //primo pattern
-        {2, 3999, 0, 2, 1999, 1000},    //secondo pattern
-        {4, 1999, 1000, 2, 3999, 0},    //terzo pattern -------------> In this case the pattern of the R channel starts LOW, 
-        {2, 999, 500, 4, 999, 500},     //quarto pattern               to set that in the PWM I initialize the internal counter to the half of the period,
-        {4, 499, 250, 2, 499, 250},     //quinto pattern               in this way the PWM starts LOW for an half of the period (phase shift).
-        {2, 1999, 500, 2, 1999, 1000},  //sesto pattern                The same strategy is used for the 4-G, 5-R and 7-R channels.
-        {4, 1999, 1000, 2, 999, 500}    //settimo pattern
+        {2, 3999, 0, 2, 3999, 0},       //first pattern
+        {2, 3999, 0, 2, 1999, 1000},    //second pattern
+        {4, 1999, 1000, 2, 3999, 0},    //third pattern
+        {2, 999, 500, 4, 999, 500},     //fourth pattern       
+        {4, 499, 250, 2, 499, 250},     //fifth pattern 
+        {2, 1999, 500, 2, 1999, 1000},  //sixth pattern 
+        {4, 1999, 1000, 2, 999, 500}    //seventh pattern
     };
     
 #endif

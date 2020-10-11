@@ -3,17 +3,6 @@
  * DAVIDE SALA
  * SECOND ASSIGNMENT
  * 
- * Breif explanation of my interpretation of the patterns:
- * I use the patterns provided in the README file as the PWMs (one for RED LED and one for the GREEN one).
- * So, given the fact that the RGB LED is in a common anode configuration,
- * when the PWM stays HIGH, the corresponding LED is in OFF state; the opposite happens in when the PWM is LOW.
- * 
- * Then, for instance taking into account the first pattern (at the power-on of the system),
- * both the LEDs are OFF until the first pression of the button.
- * 
- * 
- * 
- * 
  * ========================================
 */
 #include "InterruptRoutines.h"
@@ -27,9 +16,11 @@ int main(void)
     
     /* Place your initialization/startup code here */
     BUTTON_ISR_StartEx(Custom_BUTTON_ISR);
-    PWM_red_SetCompareMode(2);
-    PWM_green_SetCompareMode(2);
-    PWM_red_Start();
+    
+    PWM_red_SetCompareMode(2);    //Initialization of the COMPARE MODE for the first pattern
+    PWM_green_SetCompareMode(2);  //Both for RED and GREEN channels
+    
+    PWM_red_Start();  //Both PWMs switched ON  
     PWM_green_Start();
     
     for(;;)

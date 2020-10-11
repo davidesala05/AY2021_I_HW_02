@@ -13,11 +13,12 @@
     #include "cytypes.h"
     
     /* 
-       The patterns are defined as a struct composed by 6 16bit values
+       The patterns are defined as a struct composed by 2 8bit variables and 4 16bit variables
        16 bit are required by the PWMs to achieve the dimension of the msec
        The first three values are the parameters of the RED channel,
        the last three are those of the GREEN one
     */
+    
      typedef struct {
         
         uint8_t mode_red;
@@ -28,6 +29,14 @@
         uint16_t DC_green;
         
     } pattern;
+    
+    /*The parameters are:
+      -- mode_[color] : is the COMPARE MODE for the PWM, the values that can be set are two in this case and are defined by default in the PWM_[color].h libraries
+                        value 2 --> corresponds to the mode LESS OR EQUAL THAN
+                        value 4 --> corresponds to the mode GREATER OR EQUAL THAN
+      -- period_[color] : is the parameter used to define the period of the PWM
+      -- DC_[color] : used to set the duty cyle of the PWM
+    */
     
     void SetPattern (pattern p); // Declaration of the function used to initialized the pattern
 
