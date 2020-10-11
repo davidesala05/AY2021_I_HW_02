@@ -17,8 +17,8 @@
  * ========================================
 */
 #include "InterruptRoutines.h"
+#include "PatternDriver.h"
 #include "project.h"
-
 
 int main(void)
 {
@@ -27,6 +27,10 @@ int main(void)
     
     /* Place your initialization/startup code here */
     BUTTON_ISR_StartEx(Custom_BUTTON_ISR);
+    PWM_red_SetCompareMode(2);
+    PWM_green_SetCompareMode(2);
+    PWM_red_Start();
+    PWM_green_Start();
     
     for(;;)
     {

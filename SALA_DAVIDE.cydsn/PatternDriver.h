@@ -20,10 +20,10 @@
     */
      typedef struct {
         
-        uint16_t start_count_red;
+        uint8_t mode_red;
         uint16_t period_red;
         uint16_t DC_red;
-        uint16_t start_count_green;
+        uint8_t mode_green;
         uint16_t period_green;
         uint16_t DC_green;
         
