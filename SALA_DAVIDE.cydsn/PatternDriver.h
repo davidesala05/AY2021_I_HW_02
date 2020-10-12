@@ -11,7 +11,8 @@
     #define __PATTERNDRIVER_H_
     
     #include "cytypes.h"
-    
+    #include "PWM_red.h"
+    #include "PWM_green.h"
     /* 
        The patterns are defined as a struct composed by 2 8bit variables and 4 16bit variables
        16 bit are required by the PWMs to achieve the dimension of the msec

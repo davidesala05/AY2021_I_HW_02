@@ -19,8 +19,6 @@
     #define __PATTERNS_H_
     
     #include "PatternDriver.h"
-    #include "PWM_red.h"
-    #include "PWM_green.h"
     
     /*
         In order to switch between the patterns in the easiest way,
