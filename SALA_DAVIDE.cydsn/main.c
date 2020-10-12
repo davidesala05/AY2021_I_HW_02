@@ -17,8 +17,8 @@ int main(void)
     /* Place your initialization/startup code here */
     BUTTON_ISR_StartEx(Custom_BUTTON_ISR);
     
-    PWM_red_SetCompareMode(2);    //Initialization of the COMPARE MODE for the first pattern
-    PWM_green_SetCompareMode(2);  //Both for RED and GREEN channels
+    PWM_red_SetCompareMode(PWM_green__B_PWM__LESS_THAN_OR_EQUAL);    //Initialization of the COMPARE MODE for the first pattern
+    PWM_green_SetCompareMode(PWM_green__B_PWM__LESS_THAN_OR_EQUAL);  //Both for RED and GREEN channels
     
     PWM_red_Start();  //Both PWMs switched ON  
     PWM_green_Start();

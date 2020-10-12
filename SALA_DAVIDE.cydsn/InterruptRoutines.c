@@ -19,8 +19,8 @@
 CY_ISR(Custom_BUTTON_ISR)
 {
     
-    if (count_press_button > (MAX_PATTERN-1)) {     //Verification of the pattern vector's overflow, if it happens, the initialization to 0 (first pattern) is done
-        count_press_button = 0;                     //The "-1" to the MAX_PATTERN is because in the pattern vector the first pattern is at the index 0
+    if (count_press_button == MAX_PATTERN) {  //Verification of the pattern vector's overflow, if it happens, the initialization to 0 (first pattern) is done
+        count_press_button = 0;
     }
     
     SetPattern(ALL_Patterns[count_press_button]); //load of the new pattern

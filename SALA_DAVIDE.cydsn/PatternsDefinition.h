@@ -11,7 +11,7 @@
  *      uint16_t DC_green;
  *   }
  * 
- * All the patterns are group together in an array of struct
+ * All the patterns are grouped together in an array of struct
  * 
  * ========================================
 */
@@ -19,21 +19,23 @@
     #define __PATTERNS_H_
     
     #include "PatternDriver.h"
+    #include "PWM_red.h"
+    #include "PWM_green.h"
     
     /*
-        In order to switch between the patterns is the easiest way,
-        the patterns are group together in a vector of structs.
+        In order to switch between the patterns in the easiest way,
+        the patterns are grouped together in a vector of structs.
     */
     
     pattern ALL_Patterns[] = {
         
-        {2, 3999, 0, 2, 3999, 0},       //first pattern
-        {2, 3999, 0, 2, 1999, 1000},    //second pattern
-        {4, 1999, 1000, 2, 3999, 0},    //third pattern
-        {2, 999, 500, 4, 999, 500},     //fourth pattern       
-        {4, 499, 250, 2, 499, 250},     //fifth pattern 
-        {2, 1999, 500, 2, 1999, 1000},  //sixth pattern 
-        {4, 1999, 1000, 2, 999, 500}    //seventh pattern
+        {PWM_green__B_PWM__LESS_THAN_OR_EQUAL, 3999, 0, PWM_green__B_PWM__LESS_THAN_OR_EQUAL, 3999, 0},             //first pattern
+        {PWM_green__B_PWM__LESS_THAN_OR_EQUAL, 3999, 0, PWM_green__B_PWM__LESS_THAN_OR_EQUAL, 1999, 1000},          //second pattern
+        {PWM_green__B_PWM__GREATER_THAN_OR_EQUAL_TO, 1999, 1000, PWM_green__B_PWM__LESS_THAN_OR_EQUAL, 3999, 0},    //third pattern
+        {PWM_green__B_PWM__LESS_THAN_OR_EQUAL, 999, 500, PWM_green__B_PWM__GREATER_THAN_OR_EQUAL_TO, 999, 500},     //fourth pattern       
+        {PWM_green__B_PWM__GREATER_THAN_OR_EQUAL_TO, 499, 250, PWM_green__B_PWM__LESS_THAN_OR_EQUAL, 499, 250},     //fifth pattern 
+        {PWM_green__B_PWM__LESS_THAN_OR_EQUAL, 1999, 500, PWM_green__B_PWM__LESS_THAN_OR_EQUAL, 1999, 1000},        //sixth pattern 
+        {PWM_green__B_PWM__GREATER_THAN_OR_EQUAL_TO, 1999, 1000, PWM_green__B_PWM__LESS_THAN_OR_EQUAL, 999, 500}    //seventh pattern
     };
     
 #endif

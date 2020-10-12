@@ -11,13 +11,13 @@
 
 void SetPattern (pattern p) {
    
-    PWM_red_SetCompareMode(p.mode_red);
+    PWM_red_SetCompareMode(p.mode_red);         //Set the compare mode
     PWM_green_SetCompareMode(p.mode_green);
-    PWM_red_WritePeriod(p.period_red);
+    PWM_red_WritePeriod(p.period_red);          //Set the period
     PWM_green_WritePeriod(p.period_green);
-    PWM_red_WriteCompare(p.DC_red);
+    PWM_red_WriteCompare(p.DC_red);             //Set the  duty cycle
     PWM_green_WriteCompare(p.DC_green);
-    PWM_red_WriteCounter(p.period_red);
+    PWM_red_WriteCounter(p.period_red);         //This function initialise the counter register, thanks to that, the pattern starts with the right timing after that all the settings have been changed
     PWM_green_WriteCounter(p.period_green);
 }
 /* [] END OF FILE */

@@ -31,9 +31,7 @@
     } pattern;
     
     /*The parameters are:
-      -- mode_[color] : is the COMPARE MODE for the PWM, the values that can be set are two in this case and are defined by default in the PWM_[color].h libraries
-                        value 2 --> corresponds to the mode LESS OR EQUAL THAN
-                        value 4 --> corresponds to the mode GREATER OR EQUAL THAN
+      -- mode_[color] : is the COMPARE MODE for the PWM, the values that I use are two in this case and are defined by default in the PWM_[color].h libraries
       -- period_[color] : is the parameter used to define the period of the PWM
       -- DC_[color] : used to set the duty cyle of the PWM
     */
