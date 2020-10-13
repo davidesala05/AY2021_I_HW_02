@@ -14,7 +14,6 @@
  // Include required header files
 #include "PatternsDefinition.h" //where the patterns are defined
 #include "GlobalVariables.h" //Where the count variable is defined
-#include "project.h"
 
 CY_ISR(Custom_BUTTON_ISR)
 {
