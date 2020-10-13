@@ -27,13 +27,13 @@
     
     pattern ALL_Patterns[] = {
         
-        {PWM_green__B_PWM__LESS_THAN_OR_EQUAL, 3999, 0, PWM_green__B_PWM__LESS_THAN_OR_EQUAL, 3999, 0},             //first pattern
-        {PWM_green__B_PWM__LESS_THAN_OR_EQUAL, 3999, 0, PWM_green__B_PWM__LESS_THAN_OR_EQUAL, 1999, 1000},          //second pattern
-        {PWM_green__B_PWM__GREATER_THAN_OR_EQUAL_TO, 1999, 1000, PWM_green__B_PWM__LESS_THAN_OR_EQUAL, 3999, 0},    //third pattern
-        {PWM_green__B_PWM__LESS_THAN_OR_EQUAL, 999, 500, PWM_green__B_PWM__GREATER_THAN_OR_EQUAL_TO, 999, 500},     //fourth pattern       
-        {PWM_green__B_PWM__GREATER_THAN_OR_EQUAL_TO, 499, 250, PWM_green__B_PWM__LESS_THAN_OR_EQUAL, 499, 250},     //fifth pattern 
-        {PWM_green__B_PWM__LESS_THAN_OR_EQUAL, 1999, 500, PWM_green__B_PWM__LESS_THAN_OR_EQUAL, 1999, 1000},        //sixth pattern 
-        {PWM_green__B_PWM__GREATER_THAN_OR_EQUAL_TO, 1999, 1000, PWM_green__B_PWM__LESS_THAN_OR_EQUAL, 999, 500}    //seventh pattern
+        {PWM_green__B_PWM__LESS_THAN, 1999, 0, PWM_green__B_PWM__LESS_THAN, 1999, 0},                      //first pattern
+        {PWM_green__B_PWM__LESS_THAN, 1999, 0, PWM_green__B_PWM__LESS_THAN, 1999, 1000},                   //second pattern
+        {PWM_green__B_PWM__GREATER_THAN_OR_EQUAL_TO, 1999, 1000, PWM_green__B_PWM__LESS_THAN, 1999, 0},    //third pattern
+        {PWM_green__B_PWM__LESS_THAN, 999, 500, PWM_green__B_PWM__GREATER_THAN_OR_EQUAL_TO, 999, 500},     //fourth pattern       
+        {PWM_green__B_PWM__GREATER_THAN_OR_EQUAL_TO, 499, 250, PWM_green__B_PWM__LESS_THAN, 499, 250},     //fifth pattern 
+        {PWM_green__B_PWM__LESS_THAN, 1999, 500, PWM_green__B_PWM__LESS_THAN, 1999, 1000},                 //sixth pattern 
+        {PWM_green__B_PWM__GREATER_THAN_OR_EQUAL_TO, 1999, 1000, PWM_green__B_PWM__LESS_THAN, 999, 500}    //seventh pattern
     };
     
 #endif
